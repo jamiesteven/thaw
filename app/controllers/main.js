@@ -37,4 +37,14 @@ angular.module('thaw').controller('MainController', ['$scope', '$location', func
         ]
     })
 
+    $scope.engagements.push({
+        title: 'Engagement 4 title',
+        body: 'Here\'s what you should do today for task 4.',
+        tips: [
+            'Tip 1 for engagement 4',
+            'Tip 2 for engagement 4',
+            'Tip 3 for engagement 4',
+        ]
+    })
+
 }]);
