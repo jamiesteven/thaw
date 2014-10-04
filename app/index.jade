@@ -1,0 +1,20 @@
+doctype html
+html(ng-app='thaw')
+    head
+        title Thaw
+        meta(name='viewport', content='width=450, user-scalable=no')
+        script(type='text/javascript', src='http://code.angularjs.org/1.2.26/angular.min.js')
+        script(type='text/javascript', src='http://code.angularjs.org/1.2.26/angular-route.min.js')
+        script(type='text/javascript', src='js/app.min.js')
+        link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+        link(rel='stylesheet', href='css/app.min.css')
+    body
+        nav.nav.navbar-default.navbar-static-top
+            .navber-inner
+                .navbar-brand
+                    a(href='/') thaw
+        .container-fluid(ng-controller='MainController')
+            div(ng-view)
+            div(style='margin-top: 50px;')
+                select(ng-model='engagementNumber')
+                    option(ng-repeat='engagement in engagements', ng-value='$index') {{ engagement.title }}

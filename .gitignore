@@ -1,0 +1,41 @@
+\.DS_Store
+
+client/styles/*.css
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+bower_components
+
+# Staging and production configurations are **not** kept under git.
+config/staging.js
+config/production.js
+config/runtime-*.json*
+config/runtime.json*
+
+.testem-dev.tap
+.testem-all.tap
+.testem-ci.tap
+testem.*
+
+reports
+
+# Local configurations kept out of source.
+local
+
+# IntelliJ project file
+.idea/
+
+.divshot-cache/
