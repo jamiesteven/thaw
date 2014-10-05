@@ -1,8 +1,8 @@
 h4.date {{ date }}
 h2 {{ engagement.title }}
 p.left {{ engagement.instructions }} {{ engagement.body }}
-p(ng-if='completions.length == 1') {{ completions.length }} person has completed this task.
-p(ng-if='completions.length > 1') {{ completions.length }} people have completed this task.
+.count(ng-if='completions.length == 1') {{ completions.length }} person has completed this task today.
+.count(ng-if='completions.length > 1') {{ completions.length }} people have completed this task today.
 .buttons
     a.btn.btn-default(href='/survey') Done
     a.btn.btn-default(href='/tips') Tips
