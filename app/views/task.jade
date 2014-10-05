@@ -1,8 +1,9 @@
-h3 {{ engagements[engagementNumber].title }}
-p {{ engagements[engagementNumber].body }}
+h4 today's challenge
 
-a.btn.btn-default(href='/survey') Done
-br
-a.btn.btn-default(href='/tips') Tips
-br
-// a.btn.btn-default(href='') Tweets
+h2 {{ engagements[engagementNumber].title }}
+p {{ engagements[engagementNumber].body }}
+.buttons
+    a.btn.btn-default(href='/survey') Done
+    a.btn.btn-default(href='/tips') Tips
+//- a.btn.btn-default(href='') Tweets
+//- a(class='twitter-timeline' href='https://twitter.com/hashtag/gothaw', data-widget-id='518527977844273153')
