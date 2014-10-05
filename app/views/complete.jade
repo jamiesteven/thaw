@@ -1,6 +1,12 @@
 h2 Nice work!
-p You completed {{ engagements[engagementNumber].title }}
-.buttons
+p You completed {{ engagement.title }}!
+
+h4 Create a profile and save your progress!
+form(ng-submit='createUser(emailAddress)')
+    input.form-control.input(ng-model='emailAddress', placeholder='email address')
+    p
+    button.btn.btn-default(href='/Home', type='submit') Save your progress
+//-.buttons
     a.btn.btn-default(href='/Home') Home
-p Care to tell us more about how it went?
-textarea.textarea
+//- p Care to tell us more about how it went?
+//- textarea.textarea

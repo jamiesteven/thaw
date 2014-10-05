@@ -1,9 +1,8 @@
 h4.date {{ date }}
-
-h2 {{ engagements[engagementNumber].title }}
-p.left {{ engagements[engagementNumber].instructions }} {{ engagements[engagementNumber].body }}
-p {{ firebase }}
-
+h2 {{ engagement.title }}
+p.left {{ engagement.instructions }} {{ engagement.body }}
+p(ng-if='completions.length == 1') {{ completions.length }} person has completed this task.
+p(ng-if='completions.length > 1') {{ completions.length }} people have completed this task.
 .buttons
     a.btn.btn-default(href='/survey') Done
     a.btn.btn-default(href='/tips') Tips

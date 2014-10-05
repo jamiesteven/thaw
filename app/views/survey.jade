@@ -1,6 +1,6 @@
 h2 Awesome. How'd it go?
 
 .buttons
-    a.btn.btn-default(href='/complete') Great!
-    a.btn.btn-default(href='/complete') Just ok.
-    a.btn.btn-default(href='/complete') Not so well.
+    a.btn.btn-default(ng-click='logCompletion("great")') Great!
+    a.btn.btn-default(ng-click='logCompletion("ok")') Just ok.
+    a.btn.btn-default(ng-click='logCompletion("notWell")') Not so well.

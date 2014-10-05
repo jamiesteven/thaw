@@ -1,5 +1,5 @@
 h2 Tips
 .left
-    p(ng-repeat='tip in engagements[engagementNumber].tips') {{ tip }}
+    p(ng-repeat='tip in engagement.tips') {{ $index + 1 }}. {{ tip }}
 .buttons
     a.btn.btn-default(href='/task') Back
