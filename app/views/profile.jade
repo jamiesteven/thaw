@@ -1,12 +1,25 @@
-h2 Profile
-h4 {{ emailAddress }}
-img(src='{{ gravatarUrl }}')
-p
-.achivement(ng-show='hand') You've completed Lend a Hand!
-.achivement(ng-show='gossip') You've completed Good Gossip!
-.achivement(ng-show='note') You've completed Leave a Note!
-.achivement(ng-show='compliment') You've completed Compliment!
-.achivement(ng-show='smile') You've completed Smile!
+
+.center
+    img.profile(src='{{ gravatarUrl }}', width='200', height='200')
+h4.float {{ emailAddress }}
+
+p Achievements
+.achievements
+    .achievement(ng-show='hand', style='background-color:#EA9C1C;')
+        i.fa.fa-shield.fa-2x
+        p Helping
+    .achievement(ng-show='gossip', style='background-color:#4A90E2;')
+        i.fa.fa-comments.fa-2x
+        p Gossip
+    .achievement(ng-show='note', style='background-color:#9013FE;')
+        i.fa.fa-pencil-square-o.fa-2x
+        p Note
+    .achievement(ng-show='compliment', style='background-color:#7ED321;')
+        i.fa.fa-thumbs-o-up.fa-2x
+        p Kindness
+    .achievement(ng-show='smile', style='background-color:#D0021B;')
+        i.fa.fa-smile-o.fa-2x
+        p Smile
 
 .buttons
     a.btn.btn-default(ng-click='doAnother()') Do another one

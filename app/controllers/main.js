@@ -19,7 +19,7 @@ angular.module('thaw').controller('MainController', ['$scope', '$location', '$co
         $scope.compliment = $cookies.compliment;
         $scope.hand = $cookies.hand;
         $scope.note = $cookies.note;
-        $scope.gravatarUrl = 'http://www.gravatar.com/avatar/' + CryptoJS.MD5($scope.emailAddress);
+        $scope.gravatarUrl = 'http://www.gravatar.com/avatar/' + CryptoJS.MD5($scope.emailAddress) + '?s=200';
     };
 
     // If cookie, get user
@@ -54,17 +54,17 @@ angular.module('thaw').controller('MainController', ['$scope', '$location', '$co
         } else {
             $location.path('/complete');
         }
+    };
 
+    // Do another
+    $scope.doAnother = function() {
         // Advance engagement
         if ($scope.engagementIndex === 4) {
             $scope.engagementIndex = 0;
         } else {
             $scope.engagementIndex += 1;
         }
-    };
 
-    // Do another
-    $scope.doAnother = function() {
         $scope.getEngagement();
 
         $location.path('/task');
