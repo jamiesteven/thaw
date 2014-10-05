@@ -39,3 +39,8 @@ local
 .idea/
 
 .divshot-cache/
+
+public/index.html
+public/js/
+public/css/
+public/html/
