@@ -1,7 +1,7 @@
 'use strict';
 
 // App invocation
-angular.module('thaw', ['ngRoute']);
+angular.module('thaw', ['ngRoute', 'firebase']);
 
 // Configuration settings for Restangular
 angular.module('thaw').config(function($locationProvider, $routeProvider) {

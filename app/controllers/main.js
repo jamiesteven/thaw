@@ -1,7 +1,13 @@
 'use strict';
 
 // Query controller ================================================================================
-angular.module('thaw').controller('MainController', ['$scope', '$location', function ($scope, $location) {
+angular.module('thaw').controller('MainController', ['$scope', '$location', '$firebase', function ($scope, $location, $firebase) {
+
+    var ref = new Firebase('https://thaw.firebaseio.com/');
+    // create an AngularFire reference to the data
+    var sync = $firebase(ref);
+    // download the data into a local object
+    $scope.fireEngagement = sync.$asObject();
 
     $scope.engagements = [];
 
